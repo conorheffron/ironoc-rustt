@@ -1,9 +1,9 @@
 # demo
 
-## Hello World with Rust
+## Hello World Demo with Rust
 
-Compile with `wasm-pack build --target web`
-
+### Build & Run Steps:
+```shell
 conorheffron@...demo> wasm-pack build --target web
 [INFO]: 🎯  Checking for the Wasm target...
 [INFO]: 🌀  Compiling to Wasm...
@@ -14,8 +14,8 @@ note: to see what the problems were, use the option `--future-incompat-report`, 
 [INFO]: Optimizing wasm binaries with `wasm-opt`...
 [INFO]: Optional fields missing from Cargo.toml: 'description', 'repository', and 'license'. These are not necessary, but recommended
 [INFO]: ✨   Done in 1.45s
-[INFO]: 📦   Your wasm pkg is ready to publish at /Users/conorheffron/workspace/ironoc_r/demo/pkg.
-conorheffron@Conors-MacBook-Pro ~/w/i/demo> http-server .
+[INFO]: 📦   Your wasm pkg is ready to publish at .../demo/pkg.
+conorheffron@...demo> http-server .
 Starting up http-server, serving .
 
 http-server version: 14.1.1
@@ -44,4 +44,6 @@ Hit CTRL-C to stop the server
 [Sun Oct 13 2024 10:27:34 GMT+0100 (Irish Standard Time)]  "GET //" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15"
 [Sun Oct 13 2024 10:27:34 GMT+0100 (Irish Standard Time)]  "GET //" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15"
 [Sun Oct 13 2024 10:27:36 GMT+0100 (Irish Standard Time)]  "GET //" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15"
-
+```
+### Browser (may not work in chrome...try safari :D):
+![wasm-pack-hw](../screenshots/demo/wasm-pack-hw.png?raw=true "Hello World App with Rust & wasm-pack / httpserver")
