@@ -1,5 +1,7 @@
 # rocketapp
 
+[![Rust](https://github.com/conorheffron/ironoc-rustt/actions/workflows/rust.yml/badge.svg)](https://github.com/conorheffron/ironoc-rustt/actions/workflows/rust.yml)
+
 ## Run steps with Rust package manager 'Cargo':
 ```shell
 conorheffron@...rocketapp> cargo build
