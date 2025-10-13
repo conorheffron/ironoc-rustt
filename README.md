@@ -1,6 +1,6 @@
 # ironoc-rustt 
 
-## Demo (wasm, wasm)
+## Demo (wasm)
 
 [Demo read me](demo/README.md)
 
