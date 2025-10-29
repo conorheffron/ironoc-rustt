@@ -1,3 +1,5 @@
+mod main;
+
 // The wasm-pack uses wasm-bindgen to build and generate JavaScript binding file.
 // Import the wasm-bindgen crate.
 use wasm_bindgen::prelude::*;

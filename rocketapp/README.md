@@ -7,6 +7,32 @@
 ```shell
 cargo update
 ```
+### Verify versions
+##### Check Cargo Version
+```shell
+cargo -V
+```
+###### Check Cargo Version Output
+```shell
+cargo 1.90.0 (840b83a10 2025-07-30)
+```
+#### Check Rust Compiler Version
+```shell
+rustc -V
+```
+###### Check Rust Compiler Version Output
+```shell
+rustc 1.90.0 (1159e78c4 2025-09-14)
+```
+#### Check Toolchain Version
+```shell
+rustup show
+```
+
+#### Update Local with latest compatible versions
+```shell
+cargo update
+```
 ##### Console Output
 ```shell
     Updating crates.io index

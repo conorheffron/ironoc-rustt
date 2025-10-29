@@ -101,3 +101,16 @@ Hit CTRL-C to stop the server
 ```
 ### Browser (may not work in chrome...try safari :D):
 ![wasm-pack-hw](../screenshots/demo/wasm-pack-hw.png?raw=true "Hello World App with Rust & wasm-pack / httpserver")
+
+### Run `main.rs`
+```shell
+cargo run --bin demo
+```
+### Run `main.rs` Console Output
+```shell
+warning: unused manifest key: package.style_edition
+Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.43s
+Running `target/debug/demo`
+cargo:rustc-cfg=RUSTC_IS_STABLE
+cargo:rustc-cfg=compiler_has_important_bugfix
+```
