@@ -2,6 +2,17 @@
 
 ## Hello World Demo with Rust
 
+### Cargo Rust Compiler Version Check
+```shell
+cargo rustc --bin demo -- --version
+```
+##### Console Output
+```shell
+warning: unused manifest key: package.style_edition
+Compiling demo v1.0.4 (/Users/conorheffron/workspace/ironoc_r/demo)
+rustc 1.90.0 (1159e78c4 2025-09-14)
+Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.31s
+```
 ### Build Demo App
 ```shell
 wasm-pack build --target web
