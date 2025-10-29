@@ -16,9 +16,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Build
+    - name: Build Rocket App
       working-directory: ./rocketapp
       run: cargo build --verbose
-    - name: Run tests
+    - name: Run tests for Rocket App
       working-directory: ./rocketapp
+      run: cargo test --verbose
+    - name: Build Demo
+      working-directory: ./demo
+      run: cargo build --verbose
+    - name: Run tests for Demo
+      working-directory: ./demo
       run: cargo test --verbose
