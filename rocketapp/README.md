@@ -3,22 +3,20 @@
 [![Rust](https://github.com/conorheffron/ironoc-rustt/actions/workflows/rust.yml/badge.svg)](https://github.com/conorheffron/ironoc-rustt/actions/workflows/rust.yml)
 
 ## Run steps with Rust package manager 'Cargo':
+### Check for updates
 ```shell
-cargo build
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.19s
-```
-
-```
 cargo update
-    Updating crates.io index
-     Locking 0 packages to latest compatible versions
-note: pass `--verbose` to see 37 unchanged dependencies behind latest
 ```
-
+##### Console Output
+```shell
+    Updating crates.io index
+     Locking 0 packages to latest Rust 1.90.0 compatible versions
+```
+### Build Rocket App
 ```shell
 cargo build
 ```
-
+##### Console Output
 ```shell
 warning: unused manifest key: package.style_edition
     Blocking waiting for file lock on build directory
@@ -171,11 +169,11 @@ warning: unused manifest key: package.style_edition
    Compiling rocketapp v1.0.4 (/Users/conorheffron/workspace/ironoc_r/rocketapp)
     Finished `dev` profile [unoptimized + debuginfo] target(s) in 2m 19s
 ```
-
+### Run Rocket App
 ```shell
 cargo run
 ```
-
+##### Console Output
 ```shell
 warning: unused manifest key: package.style_edition
     Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.69s
