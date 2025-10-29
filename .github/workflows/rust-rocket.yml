@@ -1,4 +1,4 @@
-name: Rust
+name: Rust CI for Rocket App
 
 on:
   push:
@@ -21,10 +21,4 @@ jobs:
       run: cargo build --verbose
     - name: Run tests for Rocket App
       working-directory: ./rocketapp
-      run: cargo test --verbose
-    - name: Build Demo
-      working-directory: ./demo
-      run: cargo build --verbose
-    - name: Run tests for Demo
-      working-directory: ./demo
       run: cargo test --verbose
