@@ -23,13 +23,11 @@ jobs:
         args: --verbose
     - uses: actions-rs/toolchain@v1
       with:
-        working-directory: ./rocketapp
         profile: minimal
         toolchain: stable
         override: true
         components: rustfmt, clippy
     - uses: actions-rs/cargo@v1
       with:
-        working-directory: ./rocketapp
         command: fmt
         args: --all -- --check
