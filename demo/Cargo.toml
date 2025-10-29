@@ -1,6 +1,6 @@
 [package]
 name = "demo"
-version = "1.0.2"
+version = "1.0.3"
 rust-version = "1.90.0"
 authors = ["Conor Heffron <conor.heffron@gmail.com>"]
 edition = "2024"
