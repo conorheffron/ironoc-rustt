@@ -23,6 +23,6 @@ jobs:
       run: cargo build --verbose
     - name: Run tests for Demo
       working-directory: ./demo
-      run: cargo rustc -- --version && rust --version && cargo test --all-features
-    # - name: Rustfmt Check
-    #   uses: actions-rust-lang/rustfmt@v1
+      run: cargo rustc -- --version cargo test --all-features
+    - name: Rustfmt Check
+      uses: actions-rust-lang/rustfmt@v1
