@@ -3,6 +3,7 @@ name = "rocketapp"
 version = "1.0.2"
 rust-version = "1.81.0"
 edition = "2021"
+style_edition = "2024"
 
 [dependencies]
 rocket = "0.5.0"

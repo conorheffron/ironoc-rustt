@@ -4,6 +4,7 @@ version = "1.0.2"
 rust-version = "1.81.0"
 authors = ["Conor Heffron <conor.heffron@gmail.com>"]
 edition = "2018"
+style_edition = "2024"
 
 [lib]
 crate-type = ["cdylib"]
