@@ -5,8 +5,8 @@
 
 
 ## Demo (wasm)
- - [Demo read me](demo/README.md)
  - [![Rust CI for Demo App](https://github.com/conorheffron/ironoc-rustt/actions/workflows/rust-ci-demo.yml/badge.svg)](https://github.com/conorheffron/ironoc-rustt/actions/workflows/rust-ci-demo.yml)
+ - [Demo read me](demo/README.md)
 
 
 ## rocketapp (Cargo, Rocket, handlebar templates)
