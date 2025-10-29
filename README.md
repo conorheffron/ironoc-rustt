@@ -1,7 +1,7 @@
 # ironoc-rustt 
 
 ## Tech
- - Cargo 2024, Rust 1.90, wasm, handlebars templates.
+ - Cargo 2024, Rust 1.90, Rocket, wasm, handlebars templates.
 
 
 ## Demo (wasm)
