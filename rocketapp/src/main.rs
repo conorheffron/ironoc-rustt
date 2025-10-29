@@ -1,12 +1,12 @@
 mod models;
 
-use rocket::{get, launch, post, routes, uri};
+use crate::models::Person;
 use rocket::form::{Contextual, Form};
-use rocket::fs::{FileServer, Options, relative};
+use rocket::fs::{relative, FileServer, Options};
 use rocket::request::FlashMessage;
 use rocket::response::{Flash, Redirect};
+use rocket::{get, launch, post, routes, uri};
 use rocket_dyn_templates::{context, Template};
-use crate::models::Person;
 
 #[launch]
 fn rocket() -> _ {
@@ -14,7 +14,13 @@ fn rocket() -> _ {
         // add templating system
         .attach(Template::fairing())
         // serve content from disk
-        .mount("/public", FileServer::new(relative!("/public"), Options::Missing | Options::NormalizeDirs))
+        .mount(
+            "/public",
+            FileServer::new(
+                relative!("/public"),
+                Options::Missing | Options::NormalizeDirs,
+            ),
+        )
         // register routes
         .mount("/", routes![root, create, hello])
 }
@@ -32,19 +38,26 @@ async fn create(form: Form<Contextual<'_, Person>>) -> Result<Flash<Redirect>, T
         return Ok(message);
     }
 
-    let error_messages: Vec<String> = form.context.errors().map(|error| {
-        let name = error.name.as_ref().unwrap().to_string();
-        let description = error.to_string();
-        format!("'{}' {}", name, description)
-    }).collect();
+    let error_messages: Vec<String> = form
+        .context
+        .errors()
+        .map(|error| {
+            let name = error.name.as_ref().unwrap().to_string();
+            let description = error.to_string();
+            format!("'{}' {}", name, description)
+        })
+        .collect();
 
-    Err(Template::render("root", context! {
-        first_name : form.context.field_value("first_name"),
-        last_name : form.context.field_value("last_name"),
-        first_name_error : form.context.field_errors("first_name").count() > 0,
-        last_name_error : form.context.field_errors("last_name").count() > 0,
-        errors: error_messages
-    }))
+    Err(Template::render(
+        "root",
+        context! {
+            first_name : form.context.field_value("first_name"),
+            last_name : form.context.field_value("last_name"),
+            first_name_error : form.context.field_errors("first_name").count() > 0,
+            last_name_error : form.context.field_errors("last_name").count() > 0,
+            errors: error_messages
+        },
+    ))
 }
 
 #[get("/hi?<name>")]

@@ -1,11 +1,13 @@
 [package]
 name = "demo"
-version = "1.0.1"
+version = "1.0.2"
+rust-version = "1.90.0"
 authors = ["Conor Heffron <conor.heffron@gmail.com>"]
-edition = "2018"
+edition = "2024"
+style_edition = "2024"
 
 [lib]
 crate-type = ["cdylib"]
 
 [dependencies]
-wasm-bindgen = "0.2"
+wasm-bindgen = "0.2.105"

@@ -1,4 +1,4 @@
-use rocket::{FromForm};
+use rocket::FromForm;
 
 #[derive(FromForm, Debug)]
 pub struct Person {
