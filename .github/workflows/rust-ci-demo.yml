@@ -21,4 +21,17 @@ jobs:
       run: cargo build --verbose
     - name: Run tests for Demo
       working-directory: ./demo
-      run: cargo rustc -- --version && rust --version && cargo test --verbose
+      run: cargo rustc -- --version && cargo test --verbose
+
+  # Check formatting with rustfmt
+  formatting:
+    name: cargo fmt
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      # Ensure rustfmt is installed and setup problem matcher
+      - uses: actions-rust-lang/setup-rust-toolchain@v1
+        with:
+          components: rustfmt
+      - name: Rustfmt Check
+        uses: actions-rust-lang/rustfmt@v1
