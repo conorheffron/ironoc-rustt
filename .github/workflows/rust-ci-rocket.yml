@@ -15,13 +15,22 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - uses: actions-rust-lang/setup-rust-toolchain@v1
-      with:
-        components: rustfmt
     - name: Build Demo
       working-directory: ./rocketapp
       run: cargo build --verbose
     - name: Run tests for Demo
       working-directory: ./rocketapp
       run: cargo rustc -- --version cargo test --verbose # --all-features
-    - name: Rustfmt Check
-      uses: actions-rust-lang/rustfmt@v1
+
+  # Check formatting with rustfmt
+  formatting:
+    name: cargo fmt
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      # Ensure rustfmt is installed and setup problem matcher
+      - uses: actions-rust-lang/setup-rust-toolchain@v1
+        with:
+          components: rustfmt
+      - name: Rustfmt Check
+        uses: actions-rust-lang/rustfmt@v1
