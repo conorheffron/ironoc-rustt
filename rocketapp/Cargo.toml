@@ -1,10 +1,10 @@
 [package]
 name = "rocketapp"
 version = "1.0.2"
-rust-version = "1.81.0"
+rust-version = "1.90.0"
 edition = "2021"
 style_edition = "2024"
 
 [dependencies]
-rocket = "0.5.0"
+rocket = "0.5.1"
 rocket_dyn_templates = { version = "0.2.0", features = ["handlebars", "tera"] }
