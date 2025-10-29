@@ -1,4 +1,6 @@
 name: Rust CI for Demo App
+permissions:
+  contents: read
 
 on:
   push:
