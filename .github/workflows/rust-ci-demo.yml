@@ -25,7 +25,7 @@ jobs:
       run: cargo build --verbose
     - name: Run tests for Demo
       working-directory: ./demo
-      run: cargo rustc -- --version && rustup show && cargo test --all-features
+      run: cargo rustc -- --version && rustup show && cargo test --verbose
     - name: Run Demo Main
       working-directory: ./demo
       run: cargo run --bin demo
