@@ -1,4 +1,6 @@
 name: Rust CI for Rocket App
+permissions:
+  contents: read
 
 on:
   push:
